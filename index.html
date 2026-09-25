@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta
+        name="description"
+        content="Kabo Sekoto — practical cybersecurity portfolio"
+    >
+
+    <meta name="theme-color" content="#070b12">
+
+    <title>Kabo Sekoto | Cybersecurity Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gridbg"></div>
+
+    <header>
+        <div class="nav">
+
+            <a class="brand" href="#home">
+                <b>&lt;/&gt;</b> KABO SEKOTO
+            </a>
+
+            <button id="navToggle">☰</button>
+
+            <nav id="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#learning">Learning</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="hero">
+
+            <div class="wrap heroGrid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ● CYBERSECURITY PORTFOLIO
+                    </div>
+
+                    <h1>
+                        Building practical cybersecurity capability through
+                        <span>labs, evidence &amp; continuous learning.</span>
+                    </h1>
+
+                    <p class="lead">
+                        IT systems professional transitioning into cybersecurity,
+                        with a hands-on focus on network security, security
+                        assessment, Linux environments and security operations.
+                    </p>
+
+                    <div class="actions">
+
+                        <a class="btn primary" href="#projects">
+                            Explore Projects →
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="https://github.com/iamskottk"
+                            target="_blank"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="https://www.linkedin.com/in/kabo-sekoto-706429259/"
+                            target="_blank"
+                        >
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                    <p class="meta">
+                        Botswana · Master’s in Cybersecurity — in progress
+                    </p>
+
+                </div>
+
+
+                <div class="terminal">
+
+                    <div class="termTop">
+                        ● ● ● <span>security-lab</span>
+                    </div>
+
+                    <div class="term">
+
+                        <p>
+                            <i>kabo@security-lab:~$</i> whoami
+                        </p>
+
+                        <p class="out">
+                            IT Systems Professional
+                        </p>
+
+                        <p>
+                            <i>kabo@security-lab:~$</i> focus
+                        </p>
+
+                        <p class="out">
+                            network-security · security-assessment · SOC
+                        </p>
+
+                        <p>
+                            <i>kabo@security-lab:~$</i> status
+                        </p>
+
+                        <p class="out">
+                            building_practical_capability<span class="blink">_</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="wrap stats">
+
+                <div>
+                    <b>03</b>
+                    <span>Practical labs documented</span>
+                </div>
+
+                <div>
+                    <b>03</b>
+                    <span>Completed cybersecurity certifications</span>
+                </div>
+
+                <div>
+                    <b>01</b>
+                    <span>Master’s programme in progress</span>
+                </div>
+
+                <div>
+                    <b>01</b>
+                    <span>SOC direction in development</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+
+            <div class="wrap two">
+
+                <div>
+                    <small>01 / ABOUT</small>
+
+                    <h2>
+                        Learning by doing.
+                    </h2>
+                </div>
+
+                <div class="copy">
+
+                    <p>
+                        I am an IT systems professional building deeper cybersecurity skills through practical, hands-on labs. My portfolio documents real exercises in network security, Linux, security assessments, password security and security operations, showing what I did, what I learned and the evidence behind my work.
+                    </p>
+
+                                        <div class="tags">
+
+                        <span>Network Security</span>
+                        <span>Security Assessment</span>
+                        <span>Linux</span>
+                        <span>Security Operations</span>
+                        <span>Technical Documentation</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section projects">
+
+            <div class="wrap">
+
+                <div class="center">
+
+                    <small>02 / PRACTICAL PROJECTS</small>
+
+                    <h2>
+                        Work that shows the process.
+                    </h2>
+
+                    <p>
+                        Projects are the centre of this portfolio. Each one
+                        includes objectives, tools, actions, outcomes and evidence.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button class="active" data-filter="all">
+                        All
+                    </button>
+
+                    <button data-filter="network">
+                        Network Security
+                    </button>
+
+                    <button data-filter="assessment">
+                        Security Assessment
+                    </button>
+
+                    <button data-filter="linux">
+                        Linux
+                    </button>
+
+                    <button data-filter="soc">
+                        SOC
+                    </button>
+
+                </div>
+
+
+                <div id="projectGrid" class="projectGrid"></div>
+
+                <div class="githubRepos" style="margin-top: 3rem;">
+                    <div class="center">
+                        <small>GITHUB REPOSITORIES</small>
+                        <h2>Explore the full project evidence.</h2>
+                        <p>Each repository contains the project documentation, technical work and supporting evidence.</p>
+                    </div>
+                    <div class="cards three">
+                        <article><strong>WEEK 03</strong><h3>PDF Password Security Assessment Lab</h3><p>Authorised PDF password security assessment using John the Ripper, Johnny GUI and Networkwalks.</p><a href="https://github.com/iamskottk/PDF-Password-Security-Assessment-Lab" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
+                        <article><strong>WEEK 02</strong><h3>Network Reconnaissance &amp; Footprinting</h3><p>Practical reconnaissance, DNS analysis, network discovery and Zenmap/Nmap assessment work.</p><a href="https://github.com/iamskottk/WK2-PJ2-NETWORK-RECONNAISSANCE-AND-FOOTPRINTING" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
+                        <article><strong>WEEK 01</strong><h3>Networkwalks Cybersecurity Lab Setup</h3><p>Foundational cybersecurity lab setup and practical environment preparation using Networkwalks.</p><a href="https://github.com/iamskottk/NETWORKWALKS-B083-WK1-PM1-CYBERSECURITY-LAB-SETUP" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING -->
+        <section id="learning" class="section">
+
+            <div class="wrap">
+
+                <div class="center">
+
+                    <small>03 / PRACTICAL LEARNING</small>
+
+                    <h2>
+                        Hands-on learning, separate from certifications.
+                    </h2>
+
+                    <p>
+                        Training platforms and technical practice are tracked
+                        here rather than being presented as certifications.
+                    </p>
+
+                </div>
+
+
+                <div class="cards three">
+
+
+                    <article>
+
+                        <strong>THM</strong>
+
+                        <h3>
+                            TryHackMe
+                        </h3>
+
+                        <p>
+                            Hands-on rooms and security learning across
+                            defensive and offensive concepts.
+                        </p>
+
+                        <em>
+                            Update with completed room/lab count and profile URL.
+                        </em>
+
+                        <a href="#">
+                            Profile — add URL →
+                        </a>
+
+                    </article>
+
+
+                    <article>
+
+                        <strong>LAB</strong>
+
+                        <h3>
+                            Personal Cybersecurity Labs
+                        </h3>
+
+                        <p>
+                            Virtualised environments, network reconnaissance,
+                            security assessment and evidence collection.
+                        </p>
+
+                        <div class="bar">
+                            <i></i>
+                        </div>
+
+                        <em>
+                            Portfolio progression: Week 01 → Week 03
+                        </em>
+
+                    </article>
+
+
+                    <article>
+
+                        <strong>SOC</strong>
+
+                        <h3>
+                            SOC / Security Operations
+                        </h3>
+
+                        <p>
+                            Developing towards log analysis, detection engineering,
+                            incident investigation and monitoring.
+                        </p>
+
+                        <em>
+                            Next build: controlled SOC detection lab.
+                        </em>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section alt">
+
+            <div class="wrap">
+
+                <div class="center">
+
+                    <small>04 / CERTIFICATIONS</small>
+
+                    <h2>
+                        Credentials supporting the practical work.
+                    </h2>
+
+                    <p>
+                        Certifications are intentionally secondary to
+                        demonstrated hands-on work.
+                    </p>
+
+                </div>
+
+
+                <div class="cards three certs">
+
+                    <article>
+                        <small>COMPLETED</small>
+                        <h3>Certified Cybersecurity Foundations</h3>
+                        <p>Cybersecurity foundations and practical security knowledge supporting continued technical development.</p>
+                        <a href="https://hackviser.com/verify?id=HV-CORE-HE6YW7XW" target="_blank" rel="noopener noreferrer">Verify Certificate →</a>
+                    </article>
+
+                    <article>
+                        <small>COMPLETED</small>
+                        <h3>Fortinet Certified Associate (FCA) in Cybersecurity</h3>
+                        <p>Security fundamentals and Fortinet-focused cybersecurity knowledge.</p>
+                        <a href="https://www.credly.com/badges/0f915481-c734-4aa5-9298-2de332f09616/linked_in_profile" target="_blank" rel="noopener noreferrer">Verify Certificate →</a>
+                    </article>
+
+                    <article>
+                        <small>COMPLETED · 28 AUG 2026</small>
+                        <h3>Certified Cybersecurity Educator Professional (CCEP)</h3>
+                        <p>Cybersecurity education and awareness-oriented professional development.</p>
+                        <a href="https://courses.redteamleaders.com/exam-completion/1d7b4aa38f124849" target="_blank" rel="noopener noreferrer">Verify Certificate →</a>
+                    </article>
+
+                </div>
+
+                <div class="education">
+
+                    <b>EDUCATION</b>
+
+                    <strong>
+                        Master’s in Cybersecurity
+                    </strong>
+
+                    <span>
+                        In progress
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements" class="section">
+
+            <div class="wrap">
+
+                <div class="center">
+
+                    <small>
+                        05 / ACHIEVEMENTS &amp; COMMUNITY
+                    </small>
+
+                    <h2>
+                        Progress worth documenting.
+                    </h2>
+
+                </div>
+
+
+                <div class="cards three">
+
+
+                    <article>
+
+                        <small>
+                            PORTFOLIO MILESTONE
+                        </small>
+
+                        <h3>
+                            Built a structured three-week cybersecurity
+                            lab portfolio
+                        </h3>
+
+                        <p>
+                            Documented practical work across Linux virtualisation,
+                            network reconnaissance and PDF security assessment.
+                        </p>
+
+                    </article>
+
+
+                    <article class="dashed">
+
+                        <small>
+                            TO ADD
+                        </small>
+
+                        <h3>
+                            CTFs, hackathons &amp; competitions
+                        </h3>
+
+                        <p>
+                            No competition records have been added yet.
+                            Add verified participation, placement, challenge
+                            areas and evidence here when available.
+                        </p>
+
+                        <em>
+                            Evidence link — add URL
+                        </em>
+
+                    </article>
+
+
+                    <article class="dashed">
+
+                        <small>
+                            TO ADD
+                        </small>
+
+                        <h3>
+                            Community, mentoring &amp; security contributions
+                        </h3>
+
+                        <p>
+                            Add verified talks, mentoring, community projects,
+                            open-source contributions or other relevant
+                            achievements.
+                        </p>
+
+                        <em>
+                            Evidence link — add URL
+                        </em>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+
+            <div class="wrap contactBox">
+
+                <div>
+
+                    <small>
+                        06 / CONTACT
+                    </small>
+
+                    <h2>
+                        Let’s connect.
+                    </h2>
+
+                    <p>
+                        For cybersecurity opportunities, technical collaboration
+                        or professional networking.
+                    </p>
+
+                </div>
+
+
+                <div class="contactLinks">
+
+                    <a
+                        href="https://github.com/iamskottk"
+                        target="_blank"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/kabo-sekoto-706429259/"
+                        target="_blank"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+                    <a href="mailto:skottk12@protonmail.com">
+                        Email ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="wrap">
+
+            <span>
+                © <span id="year"></span> Kabo Sekoto
+            </span>
+
+            <span>
+                Learning today. Securing tomorrow.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" aria-hidden="true">
+
+        <div class="backdrop"></div>
+
+        <div class="modalBox">
+
+            <button id="close">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
