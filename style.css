@@ -45,3 +45,10 @@
 .githubRepos .cards article{transition:transform .25s ease,border-color .25s ease,background .25s ease}
 .githubRepos .cards article:hover{transform:translateY(-5px);border-color:rgba(97,242,176,.3);background:rgba(97,242,176,.035)}
 .section{scroll-margin-top:80px}
+
+
+/* Clear, high-visibility portfolio statistics */
+.stats>div{min-height:112px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:22px 20px}
+.stats b{display:block!important;color:#61f2b0!important;font-size:2.35rem!important;line-height:1!important;letter-spacing:.04em!important;text-shadow:0 0 22px rgba(97,242,176,.38)!important;margin-bottom:10px}
+.stats span{display:block!important;color:#d4dde8!important;font-size:.8rem!important;line-height:1.35!important;font-weight:700!important}
+@media(max-width:680px){.stats>div{min-height:105px}.stats b{font-size:2.1rem!important}}
