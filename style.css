@@ -32,3 +32,16 @@
 @keyframes tagPop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
 @keyframes buttonGlow{50%{box-shadow:0 0 28px rgba(97,242,176,.28);transform:translateY(-2px)}}
 @media(prefers-reduced-motion:reduce){.featuredHero .wrap,.featuredHero *{animation:none!important}}
+
+
+/* Portfolio visual refinement */
+.stats>div{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(97,242,176,.075),rgba(255,255,255,.025));border:1px solid rgba(97,242,176,.16);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.stats>div:hover{transform:translateY(-4px);border-color:rgba(97,242,176,.42);box-shadow:0 14px 35px rgba(0,0,0,.25)}
+.stats b{color:var(--green)!important;text-shadow:0 0 18px rgba(97,242,176,.22);font-size:2rem}
+.stats span{color:#b7c3d1;font-weight:600}
+.projectGrid{margin-top:28px}
+.projects .center h2,.learning .center h2{color:var(--text)}
+.githubRepos{margin-top:4.5rem!important}
+.githubRepos .cards article{transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.githubRepos .cards article:hover{transform:translateY(-5px);border-color:rgba(97,242,176,.3);background:rgba(97,242,176,.035)}
+.section{scroll-margin-top:80px}
