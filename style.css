@@ -308,11 +308,11 @@ footer:before{content:"";display:block;height:1px;margin-bottom:18px;background:
 /* ===== PROFILE PHOTO / CYBER HERO ===== */
 .heroGrid{grid-template-columns:1.1fr .62fr .85fr;gap:36px}
 .profileShowcase{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-width:0;animation:profileIn .9s ease-out .18s both}
-.profileFrame{position:relative;width:min(100%,285px);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,#61f2b0,#6aa7ff,#61f2b0);box-shadow:0 0 0 1px rgba(97,242,176,.16),0 0 45px rgba(97,242,176,.16),0 20px 55px rgba(0,0,0,.38);animation:profileOrbit 7s linear infinite}
+.profileFrame{position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,#61f2b0,#6aa7ff,#61f2b0);box-shadow:0 0 0 1px rgba(97,242,176,.16),0 0 45px rgba(97,242,176,.16),0 20px 55px rgba(0,0,0,.38);animation:none}
 .profileFrame:before{content:"";position:absolute;inset:-12px;border:1px solid rgba(97,242,176,.13);border-radius:50%;animation:profilePulse 2.8s ease-in-out infinite}
-.profileFrame:after{content:"";position:absolute;inset:5px;border-radius:50%;background:radial-gradient(circle at 50% 15%,rgba(97,242,176,.08),transparent 42%);pointer-events:none;mix-blend-mode:screen}
+.profileFrame:after{content:"";position:absolute;inset:5px;border-radius:50%;background:none;pointer-events:none}
 .profileFrame img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid #070b12;position:relative;z-index:1}
-.profileScan{position:absolute;left:10%;right:10%;top:12%;height:2px;background:linear-gradient(90deg,transparent,#61f2b0,transparent);box-shadow:0 0 14px #61f2b0;z-index:3;opacity:.8;animation:profileScan 3.4s ease-in-out infinite}
+.profileScan{position:absolute;left:10%;right:10%;top:12%;height:2px;background:linear-gradient(90deg,transparent,#61f2b0,transparent);box-shadow:0 0 14px #61f2b0;z-index:3;opacity:.28;animation:profileScan 4.2s ease-in-out infinite}
 .profileMeta{text-align:center;display:flex;flex-direction:column;gap:3px}
 .profileMeta span{color:#61f2b0;font:700 .62rem monospace;letter-spacing:.13em}
 .profileMeta b{color:#8d9aaa;font:700 .58rem monospace;letter-spacing:.08em}
