@@ -325,3 +325,21 @@ footer:before{content:"";display:block;height:1px;margin-bottom:18px;background:
 @media(max-width:680px){.profileFrame{width:min(78vw,280px)}.profileFrame:before{inset:-8px}}
 @media(prefers-reduced-motion:reduce){.profileShowcase,.profileFrame,.profileFrame:before,.profileScan{animation:none!important}}
 \n/* Enhanced animated profile treatment */\n.profileShowcase:hover .profileFrame{animation-duration:3.2s,1.8s}\n.profileShowcase:hover .profileFrame img{transform:scale(1.025);filter:saturate(1.08) contrast(1.04);}\n.profileFrame img{transition:transform .45s ease,filter .45s ease}\n@media(prefers-reduced-motion:reduce){.profileFrame{animation:none!important}.profileShowcase:hover .profileFrame img{transform:none;filter:none}}\n\n/* Portfolio-colour rotating profile ring */\n.profileFrame:before{will-change:transform}\n.profileFrame:after{border:1px solid rgba(106,167,255,.18)}\n@keyframes profileColourShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}100%{filter:hue-rotate(0deg)}}\n.profileFrame{animation:profileFloat 5s ease-in-out infinite,profileGlow 3s ease-in-out infinite,profileColourShift 6s ease-in-out infinite}\n@media(prefers-reduced-motion:reduce){.profileFrame{animation:none!important}.profileFrame:before{animation:none!important}}\n
+
+/* ===== SUBTLE PORTFOLIO-GREEN PROFILE PHOTO ===== */
+.profileFrame img{
+  filter:grayscale(48%) sepia(18%) hue-rotate(78deg) saturate(1.35) brightness(.97) contrast(1.04);
+  transition:transform .45s ease,filter .45s ease;
+}
+.profileFrame:after{
+  background:
+    linear-gradient(135deg,rgba(97,242,176,.12),transparent 38%,rgba(97,242,176,.05)),
+    radial-gradient(circle at 30% 25%,rgba(97,242,176,.10),transparent 42%);
+}
+.profileShowcase:hover .profileFrame img{
+  transform:scale(1.025);
+  filter:grayscale(32%) sepia(22%) hue-rotate(78deg) saturate(1.5) brightness(.99) contrast(1.05);
+}
+@media(prefers-reduced-motion:reduce){
+  .profileShowcase:hover .profileFrame img{transform:none}
+}
