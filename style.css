@@ -343,3 +343,16 @@ footer:before{content:"";display:block;height:1px;margin-bottom:18px;background:
 @media(prefers-reduced-motion:reduce){
   .profileShowcase:hover .profileFrame img{transform:none}
 }
+
+
+/* ===== CAPABILITY SECTION ===== */
+.four{grid-template-columns:repeat(4,1fr)}
+.capabilityGrid{margin-top:42px}
+.capabilityGrid article{min-height:230px}
+.capabilityGrid article>strong{font-size:.7rem}
+.capabilityGrid article h3{margin-top:4px}
+.capabilityGrid article p{line-height:1.7}
+.capabilities{position:relative}
+.capabilities:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(97,242,176,.035),transparent 45%);pointer-events:none}
+@media(max-width:1000px){.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.four{grid-template-columns:1fr}}
