@@ -332,7 +332,7 @@
 
                 <div class="socIntro">
                     <span class="socStatus"><i></i> INVESTIGATION COMPLETE</span>
-                    <p><b>Detection → Investigation</b> — Event ID 4625 was identified in the Windows Security log, followed by PowerShell analysis and comparison with Event ID 4624 successful logon activity.</p>
+                    <p><b>Detection → Investigation → Baseline</b> — The evidence shows a Windows Security Event ID 4625 failed logon, followed by PowerShell extraction of the authentication fields, then Event ID 4624 successful SYSTEM service logons used as baseline activity.</p>
                 </div>
 
                 <div class="socEvidenceGrid">
@@ -346,7 +346,7 @@
                         <div class="socEvidenceBody">
                             <small>01 / DETECTION</small>
                             <h3>Windows Security Event — ID 4625</h3>
-                            <p>Event Viewer shows a Windows Security audit event reporting that an account failed to log on.</p>
+                            <p>Event Viewer shows Security Event ID 4625 with <b>Audit Failure</b>, confirming that an account failed to log on. The evidence also shows the Windows Logon audit subcategory being reviewed with <code>auditpol</code>.</p>
                             <div class="socTags"><span>Event Viewer</span><span>Security Log</span><span>Event ID 4625</span></div>
                         </div>
                     </article>
@@ -361,7 +361,7 @@
                         <div class="socEvidenceBody">
                             <small>02 / INVESTIGATION</small>
                             <h3>PowerShell Authentication Analysis</h3>
-                            <p>PowerShell was used to extract and review authentication fields including logon type, process, authentication package, status and source address.</p>
+                            <p>PowerShell was used to query Event ID 4625 and inspect fields including TargetUserName, TargetDomainName, Status <code>0xc000006a</code>, Logon Type <code>2</code>, Logon Process <code>User32</code>, Authentication Package <code>Negotiate</code>, Process Name <code>svchost.exe</code> and source address <code>127.0.0.1</code>.</p>
                             <div class="socTags"><span>PowerShell</span><span>Event Analysis</span><span>Authentication</span></div>
                         </div>
                     </article>
@@ -375,14 +375,14 @@
                         <div class="socEvidenceBody">
                             <small>03 / BASELINE</small>
                             <h3>Successful Logon Activity — ID 4624</h3>
-                            <p>PowerShell output shows successful Windows logon events, including SYSTEM service logons (Logon Type 5), providing useful baseline authentication activity for comparison.</p>
+                            <p>PowerShell output shows Event ID 4624 successful logons for the <b>SYSTEM</b> account with <b>Logon Type 5</b>, representing service logon activity. This provides a useful normal-activity baseline when reviewing the failed Event ID 4625.</p>
                             <div class="socTags"><span>Event ID 4624</span><span>Successful Logon</span><span>Baseline</span></div>
                         </div>
                     </article>
                 </div>
 
                 <div class="socTakeaway">
-                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a raw Windows security alert to structured investigation evidence, extract relevant authentication fields with PowerShell, and distinguish failed authentication from normal successful logon activity.</p></div>
+                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a Windows security alert to structured investigation: identify Event ID 4625, extract and interpret authentication fields with PowerShell, and compare the result against Event ID 4624 successful service-logon activity to separate failed authentication from normal baseline behaviour.</p></div>
                     <a class="btn primary" href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View SOC Lab Repository →</a>
                 </div>
             </div>
