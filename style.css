@@ -308,19 +308,20 @@ footer:before{content:"";display:block;height:1px;margin-bottom:18px;background:
 /* ===== PROFILE PHOTO / CYBER HERO ===== */
 .heroGrid{grid-template-columns:1.1fr .62fr .85fr;gap:36px}
 .profileShowcase{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-width:0;animation:profileIn .9s ease-out .18s both}
-.profileFrame{position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,#61f2b0,#6aa7ff,#61f2b0);box-shadow:0 0 0 1px rgba(97,242,176,.16),0 0 45px rgba(97,242,176,.16),0 20px 55px rgba(0,0,0,.38);animation:none}
-.profileFrame:before{content:"";position:absolute;inset:-12px;border:1px solid rgba(97,242,176,.13);border-radius:50%;animation:profilePulse 2.8s ease-in-out infinite}
-.profileFrame:after{content:"";position:absolute;inset:5px;border-radius:50%;background:none;pointer-events:none}
+.profileFrame{position:relative;width:min(100%,320px);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,#61f2b0,#6aa7ff,#61f2b0);box-shadow:0 0 0 1px rgba(97,242,176,.16),0 0 45px rgba(97,242,176,.16),0 20px 55px rgba(0,0,0,.38);animation:profileFloat 5s ease-in-out infinite,profileGlow 3s ease-in-out infinite}
+.profileFrame:before{content:"";position:absolute;inset:-12px;border:1px solid rgba(97,242,176,.13);border-radius:50%;animation:profilePulse 2.8s ease-in-out infinite,profileRing 7s linear infinite}
+.profileFrame:after{content:"";position:absolute;inset:5px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 35%,rgba(97,242,176,.06));pointer-events:none;z-index:2;mix-blend-mode:screen}
 .profileFrame img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid #070b12;position:relative;z-index:1}
 .profileScan{position:absolute;left:10%;right:10%;top:12%;height:2px;background:linear-gradient(90deg,transparent,#61f2b0,transparent);box-shadow:0 0 14px #61f2b0;z-index:3;opacity:.28;animation:profileScan 4.2s ease-in-out infinite}
 .profileMeta{text-align:center;display:flex;flex-direction:column;gap:3px}
 .profileMeta span{color:#61f2b0;font:700 .62rem monospace;letter-spacing:.13em}
 .profileMeta b{color:#8d9aaa;font:700 .58rem monospace;letter-spacing:.08em}
 @keyframes profileIn{from{opacity:0;transform:scale(.88) translateY(18px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
-@keyframes profileOrbit{to{transform:rotate(360deg)}}
-@keyframes profilePulse{50%{transform:scale(1.035);opacity:.55}}
+@keyframes profileOrbit{to{transform:rotate(360deg)}}\n@keyframes profileFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(.6deg)}}\n@keyframes profileGlow{0%,100%{box-shadow:0 0 0 1px rgba(97,242,176,.16),0 0 38px rgba(97,242,176,.14),0 20px 55px rgba(0,0,0,.38)}50%{box-shadow:0 0 0 1px rgba(106,167,255,.28),0 0 65px rgba(97,242,176,.28),0 24px 65px rgba(0,0,0,.45)}}
+@keyframes profilePulse{50%{transform:scale(1.035);opacity:.55}}\n@keyframes profileRing{to{transform:rotate(360deg)}}
 @keyframes profileScan{0%,100%{top:14%;opacity:0}20%{opacity:.8}50%{top:84%;opacity:.9}80%{opacity:.4} }
 @media(max-width:1050px){.heroGrid{grid-template-columns:1fr .72fr;gap:42px}.profileShowcase{grid-column:2;grid-row:1}.heroGrid>.terminal{grid-column:1 / -1;grid-row:2}}
 @media(max-width:900px){.heroGrid{grid-template-columns:1fr}.profileShowcase{grid-column:auto;grid-row:auto}.heroGrid>.terminal{grid-column:auto;grid-row:auto}.profileFrame{width:min(72vw,300px)}}
 @media(max-width:680px){.profileFrame{width:min(78vw,280px)}.profileFrame:before{inset:-8px}}
 @media(prefers-reduced-motion:reduce){.profileShowcase,.profileFrame,.profileFrame:before,.profileScan{animation:none!important}}
+\n/* Enhanced animated profile treatment */\n.profileShowcase:hover .profileFrame{animation-duration:3.2s,1.8s}\n.profileShowcase:hover .profileFrame img{transform:scale(1.025);filter:saturate(1.08) contrast(1.04);}\n.profileFrame img{transition:transform .45s ease,filter .45s ease}\n@media(prefers-reduced-motion:reduce){.profileFrame{animation:none!important}.profileShowcase:hover .profileFrame img{transform:none;filter:none}}\n
