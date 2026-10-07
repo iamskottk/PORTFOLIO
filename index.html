@@ -326,64 +326,36 @@
             <div class="wrap">
                 <div class="center">
                     <small>03.5 / SOC EVIDENCE</small>
-                    <h2>Windows Authentication Investigation</h2>
-                    <p>Practical SOC evidence showing the full investigation flow: detecting a failed logon, extracting authentication fields with PowerShell, and comparing the activity with successful Windows logons.</p>
-                </div>
-
-                <div class="socIntro">
-                    <span class="socStatus"><i></i> INVESTIGATION COMPLETE</span>
-                    <p><b>Detection → Investigation → Baseline</b> — The evidence shows a Windows Security Event ID 4625 failed logon, followed by PowerShell extraction of the authentication fields, then Event ID 4624 successful SYSTEM service logons used as baseline activity.</p>
+                    <h2>Windows SOC Evidence</h2>
                 </div>
 
                 <div class="socEvidenceGrid">
                     <article class="socEvidenceCard">
                         <div class="socEvidenceImage">
                             <a href="assets/soc-event-4625.jpg" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/soc-event-4625.jpg" alt="Windows Event Viewer showing Security Event ID 4625, an account failed to log on" loading="lazy">
+                                <img src="assets/soc-event-4625.jpg" alt="SOC evidence screenshot 1" loading="lazy">
                                 <span>VIEW FULL EVIDENCE ↗</span>
                             </a>
-                        </div>
-                        <div class="socEvidenceBody">
-                            <small>01 / DETECTION</small>
-                            <h3>Windows Security Event — ID 4625</h3>
-                            <p>Event Viewer shows Security Event ID 4625 with <b>Audit Failure</b>, confirming that an account failed to log on. The evidence also shows the Windows Logon audit subcategory being reviewed with <code>auditpol</code>.</p>
-                            <div class="socTags"><span>Event Viewer</span><span>Security Log</span><span>Event ID 4625</span></div>
                         </div>
                     </article>
 
                     <article class="socEvidenceCard">
                         <div class="socEvidenceImage">
-                            <a href="assets/soc-powershell-4625.webp" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/soc-powershell-4625.webp" alt="PowerShell output analysing Windows Event ID 4625 authentication fields" loading="lazy">
+                            <a href="assets/soc-powershell-4625.jpg" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/soc-powershell-4625.jpg" alt="SOC evidence screenshot 2" loading="lazy">
                                 <span>VIEW FULL EVIDENCE ↗</span>
                             </a>
                         </div>
-                        <div class="socEvidenceBody">
-                            <small>02 / INVESTIGATION</small>
-                            <h3>PowerShell Authentication Analysis</h3>
-                            <p>PowerShell was used to query Event ID 4625 and inspect fields including TargetUserName, TargetDomainName, Status <code>0xc000006a</code>, Logon Type <code>2</code>, Logon Process <code>User32</code>, Authentication Package <code>Negotiate</code>, Process Name <code>svchost.exe</code> and source address <code>127.0.0.1</code>.</p>
-                            <div class="socTags"><span>PowerShell</span><span>Event Analysis</span><span>Authentication</span></div>
-                        </div>
                     </article>
+
                     <article class="socEvidenceCard">
                         <div class="socEvidenceImage">
                             <a href="assets/soc-event-4624.jpg" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/soc-event-4624.jpg" alt="PowerShell output showing successful Windows Event ID 4624 logon activity" loading="lazy">
+                                <img src="assets/soc-event-4624.jpg" alt="SOC evidence screenshot 3" loading="lazy">
                                 <span>VIEW FULL EVIDENCE ↗</span>
                             </a>
                         </div>
-                        <div class="socEvidenceBody">
-                            <small>03 / BASELINE</small>
-                            <h3>Successful Logon Activity — ID 4624</h3>
-                            <p>PowerShell output shows Event ID 4624 successful logons for the <b>SYSTEM</b> account with <b>Logon Type 5</b>, representing service logon activity. This provides a useful normal-activity baseline when reviewing the failed Event ID 4625.</p>
-                            <div class="socTags"><span>Event ID 4624</span><span>Successful Logon</span><span>Baseline</span></div>
-                        </div>
                     </article>
-                </div>
-
-                <div class="socTakeaway">
-                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a Windows security alert to structured investigation: identify Event ID 4625, extract and interpret authentication fields with PowerShell, and compare the result against Event ID 4624 successful service-logon activity to separate failed authentication from normal baseline behaviour.</p></div>
-                    <a class="btn primary" href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View SOC Lab Repository →</a>
                 </div>
             </div>
         </section>
