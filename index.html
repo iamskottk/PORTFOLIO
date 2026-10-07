@@ -311,7 +311,7 @@
                     <div class="cards three">
                         <article><strong>WEEK 04</strong><h3>Mediroza General Hospital Security Assessment</h3><p>Controlled black box security assessment covering reconnaissance, web application testing and evidence based reporting.</p><a href="https://github.com/iamskottk/MEDIROZA-GENERAL-HOSPITAL" target="_blank" rel="noopener noreferrer">View Repository →</a></article><article><strong>WEEK 03</strong><h3>PDF Password Security Assessment Lab</h3><p>Authorised PDF password security assessment using John the Ripper, Johnny GUI and Networkwalks.</p><a href="https://github.com/iamskottk/PDF-Password-Security-Assessment-Lab" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
                         <article><strong>WEEK 02</strong><h3>Network Reconnaissance &amp; Footprinting</h3><p>Practical reconnaissance, DNS analysis, network discovery and Zenmap/Nmap assessment work.</p><a href="https://github.com/iamskottk/WK2-PJ2-NETWORK-RECONNAISSANCE-AND-FOOTPRINTING" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
-                        <article><strong>WEEK 01</strong><h3>Networkwalks Cybersecurity Lab Setup</h3><p>Foundational cybersecurity lab setup and practical environment preparation using Networkwalks.</p><a href="https://github.com/iamskottk/NETWORKWALKS-B083-WK1-PM1-CYBERSECURITY-LAB-SETUP" target="_blank" rel="noopener noreferrer">View Repository →</a></article><article><strong>SOC LAB</strong><h3>SOC Detection &amp; Incident Investigation</h3><p>Windows Security Event Log investigation and PowerShell detection engineering focused on failed and successful authentication activity.</p><a href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View Repository →</a></article><article><strong>PERSONAL PROJECT</strong><h3>ClinicCallSystem</h3><p>A Flask based real time clinic communication and workflow system built as an independent practical project.</p><a href="https://github.com/iamskottk/Clinic-Communication-System" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
+                        <article><strong>WEEK 01</strong><h3>Networkwalks Cybersecurity Lab Setup</h3><p>Foundational cybersecurity lab setup and practical environment preparation using Networkwalks.</p><a href="https://github.com/iamskottk/NETWORKWALKS-B083-WK1-PM1-CYBERSECURITY-LAB-SETUP" target="_blank" rel="noopener noreferrer">View Repository →</a></article><article><strong>SOC LAB</strong><h3>SOC Detection &amp; Incident Investigation</h3><p>Windows Security Event Log investigation and PowerShell detection engineering focused on failed authentication (Event ID 4625), successful logon activity (Event ID 4624), and structured authentication analysis.</p><a href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View Repository →</a></article><article><strong>PERSONAL PROJECT</strong><h3>ClinicCallSystem</h3><p>A Flask based real time clinic communication and workflow system built as an independent practical project.</p><a href="https://github.com/iamskottk/Clinic-Communication-System" target="_blank" rel="noopener noreferrer">View Repository →</a></article>
                     </div>
                 </div>
 
@@ -327,12 +327,12 @@
                 <div class="center">
                     <small>03.5 / SOC EVIDENCE</small>
                     <h2>Windows Authentication Investigation</h2>
-                    <p>Practical SOC evidence showing how I identified a failed logon event and investigated the underlying authentication details using Windows Security logs and PowerShell.</p>
+                    <p>Practical SOC evidence showing the full investigation flow: detecting a failed logon, extracting authentication fields with PowerShell, and comparing the activity with successful Windows logons.</p>
                 </div>
 
                 <div class="socIntro">
                     <span class="socStatus"><i></i> INVESTIGATION COMPLETE</span>
-                    <p><b>Detection → Investigation</b> — Event ID 4625 was identified in the Windows Security log, followed by PowerShell analysis of the event fields.</p>
+                    <p><b>Detection → Investigation</b> — Event ID 4625 was identified in the Windows Security log, followed by PowerShell analysis and comparison with Event ID 4624 successful logon activity.</p>
                 </div>
 
                 <div class="socEvidenceGrid">
@@ -365,10 +365,24 @@
                             <div class="socTags"><span>PowerShell</span><span>Event Analysis</span><span>Authentication</span></div>
                         </div>
                     </article>
+                    <article class="socEvidenceCard">
+                        <div class="socEvidenceImage">
+                            <a href="assets/soc-event-4624.jpg" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/soc-event-4624.jpg" alt="PowerShell output showing successful Windows Event ID 4624 logon activity" loading="lazy">
+                                <span>VIEW FULL EVIDENCE ↗</span>
+                            </a>
+                        </div>
+                        <div class="socEvidenceBody">
+                            <small>03 / BASELINE</small>
+                            <h3>Successful Logon Activity — ID 4624</h3>
+                            <p>PowerShell output shows successful Windows logon events, including SYSTEM service logons (Logon Type 5), providing useful baseline authentication activity for comparison.</p>
+                            <div class="socTags"><span>Event ID 4624</span><span>Successful Logon</span><span>Baseline</span></div>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="socTakeaway">
-                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a raw Windows security alert to structured investigation evidence rather than relying only on a visual event log.</p></div>
+                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a raw Windows security alert to structured investigation evidence, extract relevant authentication fields with PowerShell, and distinguish failed authentication from normal successful logon activity.</p></div>
                     <a class="btn primary" href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View SOC Lab Repository →</a>
                 </div>
             </div>
