@@ -320,6 +320,60 @@
         </section>
 
 
+
+        <!-- SOC EVIDENCE -->
+        <section id="soc-evidence" class="section socEvidence">
+            <div class="wrap">
+                <div class="center">
+                    <small>03.5 / SOC EVIDENCE</small>
+                    <h2>Windows Authentication Investigation</h2>
+                    <p>Practical SOC evidence showing how I identified a failed logon event and investigated the underlying authentication details using Windows Security logs and PowerShell.</p>
+                </div>
+
+                <div class="socIntro">
+                    <span class="socStatus"><i></i> INVESTIGATION COMPLETE</span>
+                    <p><b>Detection → Investigation</b> — Event ID 4625 was identified in the Windows Security log, followed by PowerShell analysis of the event fields.</p>
+                </div>
+
+                <div class="socEvidenceGrid">
+                    <article class="socEvidenceCard">
+                        <div class="socEvidenceImage">
+                            <a href="assets/soc-event-4625.webp" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/soc-event-4625.webp" alt="Windows Event Viewer showing Security Event ID 4625, an account failed to log on" loading="lazy">
+                                <span>VIEW FULL EVIDENCE ↗</span>
+                            </a>
+                        </div>
+                        <div class="socEvidenceBody">
+                            <small>01 / DETECTION</small>
+                            <h3>Windows Security Event — ID 4625</h3>
+                            <p>Event Viewer shows a Windows Security audit event reporting that an account failed to log on.</p>
+                            <div class="socTags"><span>Event Viewer</span><span>Security Log</span><span>Event ID 4625</span></div>
+                        </div>
+                    </article>
+
+                    <article class="socEvidenceCard">
+                        <div class="socEvidenceImage">
+                            <a href="assets/soc-powershell-4625.webp" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/soc-powershell-4625.webp" alt="PowerShell output analysing Windows Event ID 4625 authentication fields" loading="lazy">
+                                <span>VIEW FULL EVIDENCE ↗</span>
+                            </a>
+                        </div>
+                        <div class="socEvidenceBody">
+                            <small>02 / INVESTIGATION</small>
+                            <h3>PowerShell Authentication Analysis</h3>
+                            <p>PowerShell was used to extract and review authentication fields including logon type, process, authentication package, status and source address.</p>
+                            <div class="socTags"><span>PowerShell</span><span>Event Analysis</span><span>Authentication</span></div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="socTakeaway">
+                    <div><strong>WHAT THIS DEMONSTRATES</strong><p>I can move from a raw Windows security alert to structured investigation evidence rather than relying only on a visual event log.</p></div>
+                    <a class="btn primary" href="https://github.com/iamskottk/My-First-Soc-lab/tree/main" target="_blank" rel="noopener noreferrer">View SOC Lab Repository →</a>
+                </div>
+            </div>
+        </section>
+
         <!-- LEARNING -->
         <section id="learning" class="section">
 
