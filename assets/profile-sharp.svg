@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 400 400">
+<defs>
+  <filter id="sharp" x="-10%" y="-10%" width="120%" height="120%">
+    <feConvolveMatrix order="3" kernelMatrix="-0.15 -0.15 -0.15 -0.15 2.2 -0.15 -0.15 -0.15 -0.15" preserveAlpha="true"/>
+  </filter>
+  <clipPath id="circle"><circle cx="200" cy="200" r="200"/></clipPath>
+</defs>
+<g clip-path="url(#circle)" filter="url(#sharp)">
+  <image href="profile.webp" x="0" y="0" width="400" height="400" preserveAspectRatio="xMidYMid slice"/>
+</g>
+</svg>
